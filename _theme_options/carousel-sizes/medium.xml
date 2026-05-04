@@ -1,0 +1,47 @@
+<!-- Theme by LZRetroGames
+https://github.com/LZRetroGames/es-theme-PlayStation-X 
+-->
+<theme>
+   <formatVersion>7</formatVersion>
+   <view name="system">
+      <!-- CARRUSEL MEDIANO -->
+      <carousel name="systemcarousel">
+         <logoSize>0.195</logoSize>
+         <logoScale>2.485</logoScale>
+         <scaledLogoSpacing>1.25</scaledLogoSpacing>
+         <maxLogoCount>8</maxLogoCount>
+
+         <pos>-0.400 0.115</pos>
+               
+         <size>1.15 1</size>
+         
+      </carousel>
+
+      <image name="marco-activo" extra="static">
+        <pos>0.0350 0.200</pos> 
+         <size>0.350 0.890</size>
+        <origin>0 0.1</origin>
+      </image>
+
+      <text name="start" extra="true">
+          <pos>0.399 0.335</pos>       
+         <size>0.35 0.04</size>
+         <fontSize>0.03</fontSize>
+           <zIndex>20</zIndex>
+      </text>
+
+      <text name="system_name" extra="true">
+         <text>{system:fullName}.proper()</text>
+         <pos>100.0 0.451</pos>
+         </text>
+
+      <text name="fullName" extra="true">
+         <pos>0.164 0.136</pos>
+         <size>0.161 0.288</size>
+         <fontSize>0.028</fontSize>
+
+      </text>
+
+   </view>
+
+</theme>

@@ -1,0 +1,171 @@
+<customView name="ps4Style" inherits="grid" displayName="${ps4StylelViewName}">
+
+   <image name="background" extra="static">
+      <visible>false</visible>      
+   </image>
+
+   <text name="gamename-grid">
+      <visible>false</visible>
+   </text>
+
+   <image name="overlay-front" extra="true">
+      <path>${themePath}/_theme_inc/images/overlay-single.png</path>
+      <origin>0.5 0.5</origin>
+      <pos>0.5 0.5</pos>
+      <minSize>1 1</minSize>
+      <tile>false</tile>
+      <zIndex>50</zIndex>
+   </image>
+
+   <!-- 🎮 CARROSSEL PRINCIPAL MELHORADO -->
+   <imagegrid name="gamegrid">
+
+      <imageSource ifSubset="grid-origin:image">image</imageSource>
+      <imageSource ifSubset="grid-origin:marquee">marquee</imageSource>
+      <imageSource ifSubset="grid-origin:thumbnail">thumbnail</imageSource>
+      <imageSource ifSubset="grid-origin:boxart">boxart</imageSource>
+      <imageSource ifSubset="grid-origin:fanart|default">fanart</imageSource>
+      <imageSource ifSubset="grid-origin:titleshot">titleshot</imageSource>
+      <imageSource ifSubset="grid-origin:cartridge">cartridge</imageSource>
+
+      <gameImage>${themePath}/_theme_inc/images/no-image-default.png</gameImage>
+      <folderImage>${themePath}/_theme_inc/images/no-image-default.png</folderImage>
+
+      <!-- 🔥 MELHOR ZOOM SELECIONADO -->
+      <autoLayoutSelectedZoom>1.28</autoLayoutSelectedZoom>
+
+      <!-- POSICIONAMENTO -->
+      <pos>-0.505 0.085</pos>
+
+      <x ifSubset="aspect-ratio:4-3">-0.725 0.085</x>
+      <x ifSubset="aspect-ratio:5-4">-0.81 0.085</x>
+      <x ifSubset="aspect-ratio:16-10">-0.595 0.085</x>
+      <x ifSubset="aspect-ratio:3-2">-0.615 0.085</x>
+      <x ifSubset="aspect-ratio:5-3">-0.585 0.085</x>
+
+      <size>1.501 0.39</size>
+
+      <size ifSubset="aspect-ratio:4-3">2 0.39</size>
+      <size ifSubset="aspect-ratio:5-4">2.180 0.39</size>
+      <size ifSubset="aspect-ratio:16-10">1.7 0.39</size>
+      <size ifSubset="aspect-ratio:3-2">1.75 0.39</size>
+      <size ifSubset="aspect-ratio:5-3">1.67 0.39</size>
+
+      <zIndex>60</zIndex>
+
+      <padding>0.01 0.06</padding>
+
+      <!-- 🎯 LAYOUT MAIS NATURAL -->
+      <autoLayout>7 1</autoLayout>
+
+      <!-- 🔥 CARROSSEL MODERNO -->
+      <scrollDirection>vertical</scrollDirection>
+      <centerSelection>true</centerSelection>
+      <scrollLoop>true</scrollLoop>
+
+      <!-- ✨ ANIMAÇÃO SUAVE (MELHORA MUITO O VISUAL) -->
+      <animateSelection>true</animateSelection>
+
+      <!-- 💡 SENSAÇÃO DE FLUIDEZ -->
+      <scrollSpeed>0.45</scrollSpeed>
+
+   </imagegrid>
+
+   <!-- 🎮 TILE PADRÃO -->
+   <gridtile name="default">
+      <padding>0 0</padding>
+      <selectionMode>full</selectionMode>
+      <imageSizeMode>minSize</imageSizeMode>
+
+      <backgroundImage>${themePath}/_theme_inc/images/caratulas/default-gamelist.png</backgroundImage>
+
+      <backgroundEdgeColor>ffffff66</backgroundEdgeColor>
+      <backgroundCenterColor>ffffff33</backgroundCenterColor>
+
+      <backgroundCornerSize>4 4</backgroundCornerSize>
+
+      <imageColor>ffffff66</imageColor>
+
+      <size>0.2 0.2</size>
+   </gridtile>
+
+   <!-- 🌟 TILE SELECIONADO MELHORADO -->
+   <gridtile name="selected">
+
+      <padding>6 6</padding>
+
+      <imageColor>ffffff</imageColor>
+
+      <!-- 💎 brilho mais moderno -->
+      <backgroundEdgeColor>ffffff33</backgroundEdgeColor>
+      <backgroundCenterColor>ffffff11</backgroundCenterColor>
+
+      <backgroundCornerSize>8 8</backgroundCornerSize>
+
+      <!-- 🎮 leve destaque tipo console moderno -->
+      <imageScale>1.08</imageScale>
+
+      <!-- ✨ profundidade -->
+      <reflexion>0.35 0</reflexion>
+
+   </gridtile>
+
+   <!-- 🖼 MARQUEE CENTRAL -->
+   <image name="gridtile.marquee" ifSubset="grid-origin:marquee|default">
+      <pos>0.5 0.5</pos>
+      <origin>0.5 0.5</origin>
+      <maxSize>0.75 0.75</maxSize>
+   </image>
+
+   <image name="gridtile.marquee:selected" ifSubset="grid-origin:marquee|default">
+      <pos>0.5 0.45</pos>
+      <origin>0.5 0.5</origin>
+      <maxSize>0.95 0.95</maxSize>
+   </image>
+
+   <!-- ⭐ FAVORITOS -->
+   <image name="gridtile.favorite">
+      <path>${themePath}/_theme_inc/images/favorite.png</path>
+      <pos>0.05 0.05</pos>
+      <maxSize>0.1 0.1</maxSize>
+   </image>
+
+   <!-- 🏆 CHEEVOS -->
+   <image name="gridtile.cheevos" if="{global.cheevos} == true">
+      <pos>0.85 0.85</pos>
+      <maxSize>0.1 0.1</maxSize>
+   </image>
+
+   <!-- 🎮 MARCO VISUAL -->
+   <image name="marco-activo" extra="static">
+      <path>${themePath}/_theme_inc/images/marco-activo-iso.png</path>
+      <pos>0.162 0.132</pos>
+      <maxSize>0.347</maxSize>
+      <zIndex>89</zIndex>
+   </image>
+
+   <!-- 🎮 NOME DO JOGO -->
+   <text name="gamename-ps4Style" extra="true">
+      <text>{game:name}</text>
+
+      <pos>0.335 0.418</pos>
+
+      <size>0.65 0.08</size>
+
+      <color>ffffff</color>
+      <backgroundColor>ff000000</backgroundColor>
+
+      <fontSize>0.054</fontSize>
+      <alignment>left</alignment>
+
+      <fontPath>${themePath}/_theme_inc/fonts/SST Light.ttf</fontPath>
+
+      <singleLineScroll>true</singleLineScroll>
+
+      <glowColor>00000035</glowColor>
+      <glowSize>1</glowSize>
+
+      <zIndex>99</zIndex>
+   </text>
+
+</customView>

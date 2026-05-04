@@ -1,0 +1,75 @@
+<!-- Theme by LZRetroGames
+https://github.com/LZRetroGames/es-theme-PlayStation-X 
+-->
+<theme>
+     <formatVersion>7</formatVersion>
+     <view name="system">
+          <video name="system_video" extra="true">
+               <maxSize>0.275 0.338</maxSize>
+               <effect>none</effect>
+               <roundCorners>5</roundCorners>
+               <showSnapshotNoVideo>false</showSnapshotNoVideo>
+               <showSnapshotDelay>false</showSnapshotDelay>
+               <path ifSubset="video-system-random:enable-random|enable-ifnospot">{random}</path>
+               <path ifSubset="video-system-random:disable-random|enable-ifnospot">${themePath}/_theme_inc/videos/${system.theme}.mp4</path>
+               <delay>0</delay>
+               <zIndex>95</zIndex>
+               <audio ifSubset="video-system-audio:disable-audio">false</audio>
+               <default>${themePath}/_theme_inc/videos/no-video.mp4</default>
+          </video>
+
+     </view>
+
+<!-- GRANDE -->
+     <view name="system" ifSubset="carousel:big">
+
+
+          <video name="system_video" extra="true" >
+               <pos>0.02 0.608</pos>
+               <maxSize>0.205 0.27</maxSize>
+          </video>
+
+          <stackpanel name="contenedor-systemdata" extra="true">
+               <pos>0.24 0.608</pos>
+          </stackpanel>
+
+          <text name="system_description" extra="true">
+               <pos>0.24 0.648</pos>
+          </text>
+     </view>
+
+<!-- LZ CONFIG --> 
+     <view name="system" ifSubset="carousel:medium">
+
+          <video name="system_video" extra="true">
+               <pos>0.04 0.63</pos>
+          </video>
+
+          <stackpanel name="contenedor-systemdata" extra="true">
+               <pos>0.38 0.700</pos>
+          </stackpanel>
+
+          <text name="system_description" extra="true" >
+               <pos>0.39 0.750</pos>
+          </text>
+     </view>
+
+<!-- PEQUEÑO -->
+     <view name="system" ifSubset="carousel:small"> 
+
+
+          <video name="system_video" extra="true" >
+               <pos>0.02 0.52</pos>
+          </video>
+
+          <stackpanel name="contenedor-systemdata" extra="true">
+               <pos>0.26 0.52</pos>
+          </stackpanel>
+
+          <text name="system_description" extra="true">               
+               <pos>0.26 0.56</pos>
+          </text>
+
+
+     </view>
+</theme>

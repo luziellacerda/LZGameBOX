@@ -1,0 +1,10 @@
+# sistema
+.DS_Store
+Thumbs.db
+
+# temporários
+*.log
+
+# opcional (se quiser ignorar só arquivos gigantes no futuro)
+# *.iso
+# *.zip

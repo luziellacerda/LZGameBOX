@@ -1,0 +1,59 @@
+<image name="overlay-art, overlay-art1, overlay-art2, overlay-art3, overlay-art4, overlay-art5, overlay-art6, overlay-art7, overlay-art8, overlay-art9, overlay-art10, overlay-art11, overlay-art12" extra="static">
+
+    <zIndex>80</zIndex>
+    <size>1 1</size>
+    <origin>1 1</origin>
+    <pos>1 1</pos>
+
+    <tile>false</tile>
+    <autoFade>false</autoFade>
+
+    <!-- 💡 BASE MAIS VIVA -->
+    <opacity>0.22</opacity>
+
+    <!-- 🌈 SUAVIZAÇÃO VISUAL -->
+    <linearSmooth>true</linearSmooth>
+
+    <!-- ✨ EFEITO DE PROFUNDIDADE -->
+    <scale>1.02 1.02</scale>
+
+    <storyboard event="open">
+
+        <!-- fade mais elegante -->
+        <animation property="opacity" to="0.35" duration="700" mode="easeOut" />
+
+        <!-- movimento leve tipo “HUD flutuando” -->
+        <animation property="offsetX"
+            to="0.015"
+            duration="9000"
+            mode="easeInOut"
+            autoreverse="true"
+            repeat="-1" />
+
+        <!-- leve respiração -->
+        <animation property="scale"
+            to="1.04 1.04"
+            duration="5000"
+            mode="easeInOut"
+            autoreverse="true"
+            repeat="-1" />
+
+    </storyboard>
+
+    <storyboard event="activateNext">
+        <animation property="opacity" to="0.4" duration="300" mode="easeOut" />
+    </storyboard>
+
+    <storyboard event="activatePrev">
+        <animation property="opacity" to="0.4" duration="300" mode="easeOut" />
+    </storyboard>
+
+    <storyboard event="deactivateNext">
+        <animation property="opacity" to="0.15" duration="400" mode="easeIn" />
+    </storyboard>
+
+    <storyboard event="deactivatePrev">
+        <animation property="opacity" to="0.15" duration="400" mode="easeIn" />
+    </storyboard>
+
+</image>
